@@ -1,0 +1,181 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="navbar.css">
+<link rel="stylesheet" type="text/css" href="footer.css">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Raleway:wght@400;600;900&display=swap" rel="stylesheet">
+<style>
+.parent{
+display:grid;
+margin-top:12vh;
+margin-left:auto;
+margin-bottom:10vh;
+grid-gap:10px;
+grid-template-columns:auto auto auto auto;
+justify-content:center;
+
+}
+.child{
+
+height:20vw;
+width:20vw;
+object-fit:cover;
+object-position:50% 40%;
+overflow:hidden;
+
+}
+.child > img{
+height:100%;
+width:100%;
+object-fit:cover;
+}
+#reel_base
+{
+	position:fixed;
+	height:85vh;
+	width:70vw;
+	margin:2vh 15vw;
+	background-color:#00030edb;
+	z-index:999;
+	color:white;
+	display:none;
+	box-sizing:border-box;
+	font-size:2vw;
+	
+}
+#reel_image{
+
+object-fit:contain;
+margin:auto;
+display:block;
+height:34vw;
+width:60vw;
+}
+#reel_back
+{
+overflow:auto;
+clear:right;
+margin:auto;
+object-fit:cover;
+cursor:no-drop;
+}
+
+.close_next{
+
+float:right;
+margin-right:2vw;
+cursor:pointer;
+user-select:none;
+}
+.prev{
+float:left;
+margin-left:2vw;
+cursor:pointer;
+user-select:none;
+
+}
+.heading_gal{
+
+margin-top:12vh;
+margin-left:auto;
+text-align:center;
+font-size:6vw;
+display:block;
+font-weight:bolder;
+}
+
+</style>
+<script language="JavaScript" src="lightbox.js">
+</script>
+</head>
+<body>
+
+<div id="reel_base">
+	<div class="close_next" onmousedown="hidegal()">
+	close
+	</div>
+	<div id="reel_back">
+		<img id="reel_image" src="">
+	</div>
+	<div class="prev" onmousedown="prev()">
+		PREV
+	</div>
+	<div class="close_next" onmousedown="next()">
+		NEXT
+	</div>
+	
+</div>
+
+<div id="navbar">
+<div class="mylogo"><a href="index.html"><img class="mylogo" src="logos\mylogo.jpeg"></a></div>
+<nav>
+<a class="top" href="index.html">HOME</a>
+<a class="top" href="about.html">ABOUT </a>
+<a class="top" href="gallery.html">GALLERY</a>
+<a class="top" href="blog.html">BLOG</a>
+<a class="top" href="contact.html">CONTACT</a>
+</nav>
+</div>
+<div>
+<div id="reel_base">
+	<div class="close_next" onmousedown="hidegal()">
+	close
+	</div>
+	<div id="reel_back">
+		<img id="reel_image" src="">
+	</div>
+	<div class="prev" onmousedown="prev()">
+		PREV
+	</div>
+	<div class="close_next" onmousedown="next()">
+		NEXT
+	</div>
+	
+</div>
+<!-- <div class="heading_gal"> --><h2 class="heading_gal">NATURE</h2><!-- </div> -->
+<div class="parent">
+	
+	<div class="child"><img onclick="showgal(1);" src="nature\n1.jpg" ></div>
+	<div class="child" ><img onclick="showgal(2);" src="nature\n2.jpg"></div>
+	
+	<div class="child"><img src="nature\n3.jpg" onclick="showgal(3)"></div>
+	<div class="child"><img src="nature\n4.jpg" onclick="showgal(4)"></div>
+	<div class="child"><img src="nature\n5.jpg" onclick="showgal(5)"></div>
+	<div class="child"><img src="nature\n6.jpg" onclick="showgal(6)"></div>
+	<div class="child"><img src="nature\n7.jpg" onclick="showgal(7)"></div>
+	<div class="child"><img src="nature\n8.jpg" onclick="showgal(8)"></div>
+	<div class="child"><img src="nature\n9.jpg" onclick="showgal(9)"></div>
+	<div class="child"><img src="nature\n10.jpg" onclick="showgal(10)"></div>
+	<div class="child"><img src="nature\n11.jpg" onclick="showgal(11)"></div>
+	<div class="child"><img src="nature\n12.jpg" onclick="showgal(12)"></div>
+	<div class="child"><img src="nature\n13.jpg" onclick="showgal(13)"></div>
+	<div class="child"><img src="nature\n14.jpg" onclick="showgal(14)"></div>
+	<div class="child"><img src="nature\n15.jpg" onclick="showgal(15)"></div>
+	<div class="child"><img src="nature\n16.jpg" onclick="showgal(16)"></div>
+	
+</div>
+
+</div>
+<footer id="foot">
+	<div class="socicon">
+		<a  href="https://www.instagram.com/hardiks_51/">
+		<img src="logos\instagram.jpg" height="3%" width="3%">
+		</a>
+	</div>
+	<div class="socicon">
+		<a href="https://www.linkedin.com/in/hardik-sharma-a0682b196">
+			<img src="logos\linkedin.png" height="3%" width="3%">
+		</a>
+	</div>
+	<div class="socicon">
+		<a href="mailto:hardik00051@gmail.com">
+			<img src="logos\mail.png" height="3%" width="3%">
+		</a>	
+	</div>
+	
+	<div id="footext">©Copyright 2020,Hardik Sharma. All rights reserved.</div>
+
+</footer>
+
+</body>
+</html>
