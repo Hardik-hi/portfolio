@@ -1,0 +1,18 @@
+#foot{
+padding:2vh 0vw;
+text-align:center;
+background-color:#161513;
+box-sizing:border-box;
+}
+.socicon{
+display:inline;
+padding:1vw 0.5vw;
+}
+#footext{
+color:white;
+margin-top:1vw;
+}
+.socicon a:link
+{
+text-decoration:none;
+}
