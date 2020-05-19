@@ -7,6 +7,16 @@
 <link rel="stylesheet" type="text/css" href="footer.css">
 
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Raleway:wght@400;600;900&display=swap" rel="stylesheet">
+<script>
+function go()
+{
+setTimeout(function()
+{
+document.getElementById("cover").style.display="none";
+//document.getElementById("above").style.display="none";
+},6000);
+}
+</script>
 <style>
 
 .backim .overtext{
@@ -66,11 +76,96 @@ from{transform:scaleY(0);transform:translate(0px,0px);}
 to{transform:scaleY(1);transform:translate(0px,3vw);}
 
 }
+#a{
+
+display:block;
+width:28vw;
+height:28vw;
+border-radius:28vw;
+background-color:#212020;
+box-sizing:border-box;
+animation-name:zoom;
+animation-duration:2s;
+animation-direction:alternate;
+animation-iteration-count:infinite;
+margin-top:15vh;
+margin-left:auto;
+margin-right:auto;
+
+}
+#b{
+position:absolute;
+background-color:#3c3a3ae0;
+height:21vw;
+width:21vw;
+border-radius:37.5vw;
+margin: 3.6vw 3.6vw;
+animation-name:zoom;
+animation-duration:2s;
+animation-iteration-count:infinite;
+animation-direction:alternate;
+
+
+}
+#c{
+position:absolute;
+background-color:#4a4747e0;
+height:14vw;
+width:14vw;
+border-radius:14vw;
+margin: 3.6vw 3.6vw;
+animation-name:zoom;
+animation-duration:2s;
+animation-iteration-count:infinite;
+animation-direction:alternate;
+
+}
+#d{
+position:absolute;
+background-color:#504d4de0;
+height:7vw;
+width:7vw;
+border-radius:7vw;
+margin: 3.6vw 3.6vw;
+animation-name:zoom;
+animation-duration:2s;
+animation-iteration-count:infinite;
+animation-direction:alternate;
+}
+@keyframes zoom{
+0%{transform:scale(0,0);}
+100%{transform:scale(1,1);}
+}
+@keyframes pop{
+0%{color:white;}
+100%{color:black;}
+}
+@keyframes pop1{
+0%{color:white;transform:scale(0,0);background-color:white;}
+100%{color:white;transform:scale(1,1);background-color:black;}
+}
+#above{
+margin-left:auto;
+margin-right:auto;
+margin-top:2%;
+text-align:center;
+font-family:Raleway,sans-serif;
+letter-spacing:1vw;
+font-size:3vw;
+color:white;
+animation-name:pop;
+animation-duration:2s;
+animation-delay:2s;
+animation-fill-mode:both;
+
+}
+
+
 
 </style>
 
 </head>
-<body>
+<body onload=go();>
 
 <div id="navbar">
 <div class="mylogo"><a href="index.html"><img class="mylogo" src="logos\mylogo.jpeg"></a></div>
@@ -81,6 +176,18 @@ to{transform:scaleY(1);transform:translate(0px,3vw);}
 <a class="top" href="blog.html">BLOG</a>
 <a class="top" href="contact.html">CONTACT</a>
 </nav>
+</div>
+<div id="cover" style="position:fixed;background-color:white;height:100%;width:100%;z-index:9999;">
+	<div id="a">
+		<div id="b">
+			<div id="c">
+				<div id="d"></div>
+			</div>
+		</div>
+	</div>
+	<div id="above">
+	HARDIK SHARMA
+	</div>
 </div>
 <!--Space for slideshow-->
 <div class="backim">
