@@ -1,0 +1,168 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hardik Sharma Photography</title>
+<link rel="stylesheet" type="text/css" href="navbar.css">
+<link rel="stylesheet" type="text/css" href="footer.css">
+<style>
+
+.backim .overtext{
+position:absolute;
+z-index:1;
+margin:0 auto;
+left:0;
+right:0;
+top:35%;
+letter-spacing:0.5vw;
+font-size:3.1vw;
+font-family:baskerville old face;
+text-align:center;
+color:white;
+animation-name: x;
+animation-duration:3s;
+animation-fill-mode:forwards;
+}
+
+#hr1{
+width:50%;
+shade:black;
+}
+
+.backim{
+position:relative;
+margin-top:5vw;
+display:inline-block;
+
+}
+
+.slides{
+height:100%;
+width:100%;
+
+}
+#content{
+margin-top:2%;
+text-align:center;
+font-size:1.8vw;
+font-family:raleway;
+
+}
+#quote{
+font-style:italic;
+font-size:2.5vw;
+font-family:Times New Roman;
+color:#434346;
+text-align:center;
+padding:1vw;
+width:60%;
+margin:auto;
+}
+/*animations*/
+@keyframes x{
+from{transform:scaleY(0);transform:translate(0px,0px);}
+to{transform:scaleY(1);transform:translate(0px,3vw);}
+
+}
+
+</style>
+<script language="JavaScript">
+/*var flag=0;
+
+slideshow();
+function slideshow()
+{
+var base=document.getElementsByClassName("slides");
+
+
+for(i=0;i<3;i++)
+{
+	base[i].style.display="none";
+	
+}
+flag++;
+
+if(flag>3)
+{
+flag=1;
+}
+base[flag-1].style.display="block";
+setTimeout(slideshow,2000);
+}
+*/
+var flag=0;
+slideshow();
+
+function slideshow() {
+  var i;
+  var base = document.getElementsByClassName("slides");
+
+  for (i = 0; i < base.length; i++) {
+    base[i].style.display = "none";  
+  }
+  flag++;
+  if (flag > base.length) {flag = 1}    
+  
+  base[flag-1].style.display = "block";  
+  
+  setTimeout(slideshow, 2000); // Change image every 2 seconds
+}
+</script>
+</head>
+<body>
+
+<div id="navbar">
+<div class="mylogo"><a href="index.html"><img class="mylogo" src="F:\portfolio\logos\mylogo.jpeg"></a></div>
+<nav>
+<a class="top" href="index.html">HOME</a>
+<a class="top" href="about.html">ABOUT </a>
+<a class="top" href="gallery.html">GALLERY</a>
+<a class="top" href="blog.html">BLOG</a>
+<a class="top" href="contact.html">CONTACT</a>
+</nav>
+</div>
+<!--Space for slideshow-->
+<div class="backim">
+	<img class="slides" src="b1 (2).jpg">
+	<!-- <img class="slides" src="b1 (1).jpg">
+	<img class="slides" src="blog_card2.jpeg"> -->
+	<div class="overtext">
+	PHOTOGRAPHY.REDEFINED.
+	<hr id="hr1">
+	<!-- <hr id="hr2"> -->
+	</div>
+</div>
+	<div id="content">
+	<div id="quote">"Taking an image, freezing a moment, reveals how rich reality truly is..."</div>
+	Reality,life,truth-all have wildly varied definitions. But one thing unites them all-
+	perspective. A perspective of who we are, what we see and what we feel.Hey there!My name's Hardik and I try to capture the world around me with my own perspective<br>
+	
+	
+	<br>Explore through my website and the images that portray the various dimensions of the world around us.Feel yourself immersed into the world of amatuer photography!
+	</div>
+
+
+</div>
+
+<footer id="foot">
+	<div class="socicon">
+		<a  href="https://www.instagram.com/hardiks_51/">
+		<img src="F:\portfolio\logos\instagram.jpg" height="3%" width="3%">
+		</a>
+	</div>
+	<div class="socicon">
+		<a href="https://www.linkedin.com/in/hardik-sharma-a0682b196">
+			<img src="F:\portfolio\logos\linkedin.png" height="3%" width="3%">
+		</a>
+	</div>
+	<div class="socicon">
+		<a href="mailto:hardik00051@gmail.com">
+			<img src="F:\portfolio\logos\mail.png" height="3%" width="3%">
+		</a>	
+	</div>
+	
+	<div id="footext">©Copyright 2020,Hardik Sharma. All rights reserved.</div>
+
+</footer>
+</body>
+</html>
