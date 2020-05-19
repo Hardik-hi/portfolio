@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="navbar.css">
+<link rel="stylesheet" type="text/css" href="footer.css">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Raleway:wght@400;600;900&display=swap" rel="stylesheet">
+<style>
+
+.maingal
+{
+
+height:100vh;
+width:60vw;
+box-sizing:border-box;
+display:grid;
+grid-gap:1.5vw;
+grid-template-columns:auto auto ;
+justify-content:center;
+align-content:center;
+margin:10vh auto;
+}
+.maingal > a{
+color:inherit;
+text-decoration:none;
+}
+.maingal #nature{
+background-image:url("galcon_1.jpg");
+}
+.maingal #culture
+{
+background-image:url("galcon_2.jpg");
+}
+.maingal #life{
+background-image:url("galcon_3.jpg");
+}
+.maingal #flora{
+background-image:url("galcon_4.jpg");
+}
+.galcon{
+height:20vw;
+width:30vw;
+object-position:50% 40%;
+overflow:hidden;
+
+background-size:cover;
+background-position:center;
+transition-property:background-size;
+transition-duration:10s;
+transition-delay:3s;
+transition-timing-function:ease-in-out;
+
+
+}
+.galcon:hover{
+background-size:130%;
+}
+.back_cover
+{
+height:20vw;
+width:30vw;
+background-color:none;
+margin:0 0;
+box-sizing:border-box;
+transition-property:background-color,color;
+transition-duration:1s;
+border:3px solid black;
+}
+.back_cover:hover{
+background-color:#00000094;
+color:white;
+}
+.title_gal{
+
+margin:8vw auto;
+text-align:center;
+font-weight:bold;
+font-size:3vw;
+font-family:raleway;
+}
+h2{
+margin-top:13vh;
+margin-left:auto;
+margin-right:auto;
+margin-bottom:-5vh;
+text-align:center;
+font-family:;
+font-size:5vw;
+text-decoration:underline;
+font-family:'Lato',sans-serif;
+}
+</style>
+
+</head>
+<body>
+<div id="navbar">
+<div class="mylogo"><a href="index.html"><img class="mylogo" src="logos\mylogo.jpeg"></a></div>
+<nav>
+<a class="top" href="index.html">HOME</a>
+<a class="top" href="about.html">ABOUT </a>
+<a class="top" href="gallery.html">GALLERY</a>
+<a class="top" href="blog.html">BLOG</a>
+<a class="top" href="contact.html">CONTACT</a>
+</nav>
+</div>
+<h2>GALLERY</h2>
+
+<div class="maingal">
+<a href="nature.html">
+<div class="galcon" id="nature">
+	<div class="back_cover">
+	<div class="title_gal">
+		NATURE
+	</div>
+	</div>	
+</div>
+</a>
+<a href="culture.html">
+<div class="galcon" id="culture">
+
+<div class="back_cover">
+	<div class="title_gal">
+		CULTURE
+	</div>
+	</div>	
+</div>
+</a>
+<a href="life.html">
+<div class="galcon" id="life">
+
+<div class="back_cover">
+	<div class="title_gal">
+		LIFE
+	</div>
+	</div>	
+</div>
+</a>
+<a href="flora.html">
+<div class="galcon" id="flora">
+
+<div class="back_cover">
+	<div class="title_gal">
+		FLORA
+	</div>
+	</div>	
+</div>
+</a>
+</div>
+<footer id="foot">
+	<div class="socicon">
+		<a  href="https://www.instagram.com/hardiks_51/">
+		<img src="logos\instagram.jpg" height="3%" width="3%">
+		</a>
+	</div>
+	<div class="socicon">
+		<a href="https://www.linkedin.com/in/hardik-sharma-a0682b196">
+			<img src="logos\linkedin.png" height="3%" width="3%">
+		</a>
+	</div>
+	<div class="socicon">
+		<a href="mailto:hardik00051@gmail.com">
+			<img src="logos\mail.png" height="3%" width="3%">
+		</a>	
+	</div>
+	
+	<div id="footext">©Copyright 2020,Hardik Sharma. All rights reserved.</div>
+
+</footer>	
+
+
+
+</body>
+</html>
