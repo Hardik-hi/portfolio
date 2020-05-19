@@ -1,0 +1,267 @@
+<!--CONTACT FORM-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="navbar.css">
+<link rel="stylesheet" type="text/css" href="footer.css">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Raleway:wght@400;600;900&display=swap" rel="stylesheet">
+
+<style>
+body,input,textarea{
+font-size:2vw;
+font-family:Raleway,Sans Serif;
+}
+
+.content{
+box-sizing:border-box;
+margin:15vh auto;
+width:70%;
+text-align:justify;
+}
+.content > h2{
+font-weight:bolder;
+font-size:5vw;
+text-align:center;
+font-family:'Lato', sans-serif;
+text-decoration:underline;
+}
+.main_form{
+position:relative;
+margin-top:-5vh;
+margin-left:auto;
+margin-right:auto;
+margin-bottom:10vh;
+width:60vw;
+height:40%;
+box-sizing:border-box;
+
+box-shadow: 0 4px 8px black, 0 6px 20px 0 black;
+animation-name:shadowchange;
+animation-duration:10s;
+animation-direction:alternate;
+animation-fill-mode:backwards;
+animation-iteration-count:infinite;
+}
+.field_box{
+box-sizing:border-box;
+padding:4vh;
+}
+.field_name{
+box-sizing:border-box;
+padding:2vh 3vw;
+width:15vw;
+height:5vh;
+display:inline;
+font-weight:bold;
+}
+.field{
+box-sizing:border-box;
+width:45vw;
+height:10vh;
+display:inline;
+margin-left:6vw;
+
+}
+.field input{
+padding:1vh 2vw;
+border: 2px solid black;
+border-radius:5vw;
+box-sizing:border-box;
+width:35vw;
+font-size:1.5vw; 
+height:7vh;
+transition-property:border-radius,border-width;
+transition-duration:1s;
+transition-timing-function:ease;
+}
+.field textarea
+{
+padding:1vh 1vw;
+border: 2px solid black;
+box-sizing:border-box;
+width:35vw;
+height:20vh;
+resize:none;
+font-size:1.5vw;
+border-radius:5vw;
+transition-property:border-radius,border-width;
+transition-duration:1s;
+transition-timing-function:ease;
+}
+.field input:focus,textarea:focus
+{
+border-width:4px;
+border-radius:0;
+outline:none;
+}
+#submit input{
+background-color:black;
+padding:1vh 3vw;
+text-align:center;
+width:15vw;
+box-sizing:border-box;
+color:white;
+}
+#submit > input:hover{
+background:#171616bf;
+outline:none;
+}
+/*animations*/
+@keyframes shadowchange{
+0% {box-shadow: 0 4px 8px black, 0 6px 20px 0 black;}
+15% {box-shadow:0 4px 8px violet, 0 6px 20px 0 violet;}
+30% {box-shadow:0 4px 8px blue, 0 6px 20px 0 blue;}
+45% {box-shadow:0 4px 8px green,0 6px 20px 0 green;}
+60% {box-shadow:0 4px 8px yellow, 0 6px 20px 0 yellow;}
+75% {box-shadow:0 4px 8px orange, 0 6px 20px 0 orange;}
+100% {box-shadow:0 4px 8px red, 0 6px 20px 0 red;}
+}
+
+</style>
+<script language="JavaScript">
+
+setInterval(function(){shadow=document.getElementsByClassName("main_form")[0].style.boxShadow="0 4px 8px red, 0 6px 20px 0 red";},3000);
+function validate(key){
+
+var base=document.getElementsByClassName("field");
+if(key==1){
+var name=base[0].getElementsByTagName("input")[0].value;
+var flag=0,i,error1=0;
+if(name.length==0)
+	{errmsg1="required field";
+		error1=1;
+	}
+else{
+for(i=0;i<name.length;i++)
+{
+if(name[i]<'A' || name[i]>'z')
+{
+	
+	if(name[i]!=" ")
+	{flag=1;
+	break;}
+	
+}
+
+}
+if(flag==1)
+	{errmsg1="Invalid name";
+	error1=1;
+	}
+}
+if(error1!=0)
+{
+document.getElementById("err1").innerHTML=errmsg1;
+base[0].getElementsByTagName("input")[0].style.borderColor="red";
+}
+else
+{
+	document.getElementById("err1").innerHTML="";
+	 base[0].getElementsByTagName("input")[0].style.borderColor="green";
+}
+}
+else if(key==2)
+{
+//for email
+var mail=base[1].getElementsByTagName("input")[0].value;
+var error2=0;
+if(mail.length==0)
+	{	
+	var errmsg2="required field";
+	error2=1;
+	}
+else{
+var flag=mail.indexOf('@')+mail.indexOf('.');
+if(flag<=1)
+{errmsg2="Invalid E-mail";
+	error2=1;
+}
+}
+if(error2!=0)
+{
+document.getElementById("err2").innerHTML=errmsg2;
+base[1].getElementsByTagName("input")[0].style.borderColor="red";
+}
+else if(error2==0)
+	{document.getElementById("err2").innerHTML="" ;
+	 base[1].getElementsByTagName("input")[0].style.borderColor="green";
+	 }
+}
+}
+
+
+</script>
+</head>
+<body>
+<div id="navbar">
+<div class="mylogo"><a href="index.html"><img class="mylogo" src="logos\mylogo.jpeg"></a></div>
+<nav>
+<a class="top" href="index.html">HOME</a>
+<a class="top" href="about.html">ABOUT </a>
+<a class="top" href="gallery.html">GALLERY</a>
+<a class="top" href="blog.html">BLOG</a>
+<a class="top" href="contact.html">CONTACT</a>
+</nav>
+</div>
+</div>
+<div class="content">
+<h2>CONTACT	</h2>
+Hey there! Want to give feedback? Have any questions? Or want to collaborate? Fill this form and you're all set! I'll get back to you real quick...
+</div>
+<div class="main_form">
+<form name="f1" method="post" action="">
+	<div class="field_box">
+		<div class="field_name">Name: </div>
+		<div class="field">
+		<input type="text" name="name1" onblur="validate(1);">
+		<span id="err1" style="float:right;font-size:1.5vw;color:red"></span>
+		</div>
+	</div>
+	<div class="field_box">
+		<div class="field_name">
+		E-mail: 
+		</div>
+		<div class="field">
+		<input type="text" name="mail" onblur="validate(2);">
+		<span id="err2" style="float:right;font-size:1.5vw;color:red;"></span>
+		</div>
+	</div>
+	<div class="field_box">
+		<div class="field_name" style="position:absolute;margin-right:3vw;">
+		Query:
+		</div>
+		<div class="field" style="margin-left:19vw;">
+		<textarea></textarea>
+		</div>
+	</div>
+	<div id="submit" style="margin:2vh auto;width:20vw">
+	<input type="button" value="SUBMIT" onclick="validate(1);validate(2);">
+	</div>
+	
+</div>
+</form>
+</div>
+<footer id="foot">
+	<div class="socicon">
+		<a  href="https://www.instagram.com/hardiks_51/">
+		<img src="logos\instagram.jpg" height="3%" width="3%">
+		</a>
+	</div>
+	<div class="socicon">
+		<a href="https://www.linkedin.com/in/hardik-sharma-a0682b196">
+			<img src="logos\linkedin.png" height="3%" width="3%">
+		</a>
+	</div>
+	<div class="socicon">
+		<a href="mailto:hardik00051@gmail.com">
+			<img src="logos\mail.png" height="3%" width="3%">
+		</a>	
+	</div>
+	
+	<div id="footext" style="font-size:1.5vw;";>©Copyright 2020,Hardik Sharma. All rights reserved.</div>
+
+</footer>
+
+</body>
+</html>
+	
