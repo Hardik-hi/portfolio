@@ -1,25 +1,49 @@
 <!--BLOGPOSTS PAGE-->
 <!DOCTYPE HTML>
 <html>
+
 <head>
-<link rel="stylesheet" type="text/css" href="navbar.css">
-<link rel="stylesheet" type="text/css" href="footer.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blogs-Hardik Sharma</title>
+<link rel="icon" href="logos\favicon.png" type="image/x-icon">
+<link rel="stylesheet" type="text/css" media="(min-width:600px)" href="navbar.css">
+<link rel="stylesheet" type="text/css" media="(max-width:600px)" href="m_navbar.css">
+<link rel="stylesheet" type="text/css" media="(min-width:600px)" href="footer.css">
+<link rel="stylesheet" type="text/css" media="(max-width:600px)" href="m_footer.css">
+
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Raleway:wght@400;600;900&display=swap" rel="stylesheet">
 <style>
+*
+{
+	box-sizing:border-box;
+}
 body{
 
 font-family:Lato,sans-serif;
 }
+
+.content{
+box-sizing:border-box;
+margin:15vh auto;
+width:60%;
+text-align:center;
+font-size:2vw;
+}
+.content > h2{
+font-weight:bolder;
+font-size:5vw;
+text-align:center;
+font-family:'Lato', sans-serif;
+text-decoration:underline;
+}
+
 .card{
 border:2px solid black;
 font-family:Raleway;
-font-size:1.6vw;
 margin: 8vh auto;
-
 width:60%;
 height:60%;
 box-sizing:border-box;
-
 background-size:cover;
 
 }
@@ -43,7 +67,7 @@ color:white;
 }
 .shade{
 font-family:Raleway;
-font-size:1.6vw;
+
 padding:10vh 5vw;
 margin:0 0;
 box-sizing:border-box;
@@ -53,7 +77,10 @@ transition-duration:1s;
 
 
 }
-
+.shade h3
+{
+	font-size:2vw;
+}
 .desc{
 font-style:italic;
 margin-bottom:2vh;
@@ -68,17 +95,40 @@ color:white;
 padding:1vw;
 display:block;
 }
-h2
+@media only screen and (max-width:600px)
 {
-font-size:5vw;
-text-decoration:underline;
-text-align:center;
-margin-top:13vh;
-margin-left:auto;
-margin-right:auto;
-}
+	.card
+	{
+		height:40vh;
+		width:80vw;
+	}
+	
+	.content{
+	margin:10vh auto;
+	width:80vw;
+	font-size:2vh;
+	}
+	.content  h2
+	{
+		font-size:5vh;
+	}
+	.shade h3
+	{
+		font-size:3vh;
+	}
+	.desc
+	{
+		font-size:2vh;
+	}
+	.link
+	{
+		font-size:2vh;
+		padding:1vh;
+	}
 
+}
 </style>
+<script src="nav_mobile.js"></script>
 </head>
 <body>
 <div id="navbar">
@@ -89,17 +139,31 @@ margin-right:auto;
 <a class="top" href="gallery.html">GALLERY</a>
 <a class="top" href="blog.html">BLOG</a>
 <a class="top" href="contact.html">CONTACT</a>
+<div class="outer" onclick="animate_ham()">
+	<div class="inner"></div>
+	<div class="inner"></div>
+	<div class="inner"></div>
+</div>
 </nav>
 </div>
-<h2>
-BLOGS
-</h2>
-<p style="margin:1vh auto;text-align:center;width:60%; font-size:2vw;">
-A look into the inner musings of the photos I click, where to go for great shots and much more!
-</p>
+CSS RENDERING ... 
+<div id="m_navbar">
+	<a class="m_top" href="index.html">HOME</a>
+	<a class="m_top" href="about.html">ABOUT </a>
+	<a class="m_top" href="gallery.html">GALLERY</a>
+	<a class="m_top" href="blog.html">BLOG</a>
+	<a class="m_top" href="contact.html">CONTACT</a>
+</div>
+
+<div class="content">
+
+	<h2>BLOGS</h2>
+	A look into the inner musings of the photos I click, where to go for great shots and much more!
+</div>
+
 <div class="card" id="card1">
 <div class="shade">
-<h3 style="font-size:2vw;">What does Meghalaya store for a photographer?</h3>
+<h3 >What does Meghalaya store for a photographer?</h3>
 <hr color="black">
 <div class="desc">Secrets the mystic mountains hold...</div>
 <a href="blog1.html" class="link">Read</a>
@@ -108,7 +172,7 @@ A look into the inner musings of the photos I click, where to go for great shots
 
 <div class="card" id="card2" >
 <div class="shade">
-<h3 style="font-size:2vw;">Capturing daily life objects</h3>
+<h3>Capturing daily life objects</h3>
 <hr color="black">
 <div class="desc">Pouring some life into the lifeless...</div>
 <a href="blog2.html" class="link">Read</a>
@@ -117,7 +181,7 @@ A look into the inner musings of the photos I click, where to go for great shots
 
 <div class="card" id="card3">
 <div class="shade">
-<h3 style="font-size:2vw;">Minimalism-the essence of life...</h3>
+<h3>Minimalism-the essence of life...</h3>
 <hr color="black">
 <div class="desc">Less is more</div>
 <a href="blog3.html" class="link">Read</a>
@@ -127,17 +191,17 @@ A look into the inner musings of the photos I click, where to go for great shots
 <footer id="foot">
 	<div class="socicon">
 		<a  href="https://www.instagram.com/hardiks_51/">
-		<img src="logos\instagram.jpg" height="3%" width="3%">
+		<img src="logos\instagram.jpg"  >
 		</a>
 	</div>
 	<div class="socicon">
 		<a href="https://www.linkedin.com/in/hardik-sharma-a0682b196">
-			<img src="logos\linkedin.png" height="3%" width="3%">
+			<img src="logos\linkedin.png" >
 		</a>
 	</div>
 	<div class="socicon">
 		<a href="mailto:hardik00051@gmail.com">
-			<img src="logos\mail.png" height="3%" width="3%">
+			<img src="logos\mail.png">
 		</a>	
 	</div>
 	

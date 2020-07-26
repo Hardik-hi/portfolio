@@ -1,4 +1,10 @@
 /*the navbar css*/
+body{
+margin:0;
+
+}
+
+
 #navbar{
 position:fixed;
 top:0;
@@ -11,6 +17,10 @@ box-sizing:border-box;
 text-align:right;
 
 z-index:999;
+}
+#hamburg
+{
+	display:none;
 }
 .top{
 padding:1.5vw;
@@ -34,6 +44,7 @@ color:white;
 margin-left:1vw;
 margin-top:-0.8vw;
 }
+
 
 a:link{
 color:white;
@@ -60,3 +71,4 @@ color:inherit;
 .mylogo > a:visited{
 color:inherit;	
 }
+

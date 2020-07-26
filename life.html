@@ -1,93 +1,23 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="navbar.css">
-<link rel="stylesheet" type="text/css" href="footer.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Life Album- Hardik Sharma Photography</title>
+<link rel="icon" href="logos\favicon.png" type="image/x-icon">
+<link rel="stylesheet" type="text/css" media="(min-width:600px)" href="navbar.css">
+<link rel="stylesheet" type="text/css" media="(max-width:600px)" href="m_navbar.css">
+<link rel="stylesheet" type="text/css" media="(min-width:600px)" href="footer.css">
+<link rel="stylesheet" type="text/css" media="(max-width:600px)" href="m_footer.css">
+<link rel="stylesheet" type="text/css" href="gallery_style.css">
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Raleway:wght@400;600;900&display=swap" rel="stylesheet">
-<style>
-.parent{
-display:grid;
-margin-top:12vh;
-margin-left:auto;
-margin-bottom:10vh;
-grid-gap:10px;
-grid-template-columns:auto auto auto auto;
-justify-content:center;
+<link rel="stylesheet" type="text/css" href="gallery_style.css">
 
-}
-.child{
-
-height:20vw;
-width:20vw;
-object-fit:cover;
-object-position:50% 40%;
-overflow:hidden;
-
-}
-.child > img{
-height:100%;
-width:100%;
-object-fit:cover;
-}
-#reel_base
-{
-	position:fixed;
-	height:85vh;
-	width:70vw;
-	margin:2vh 15vw;
-	background-color:#00030edb;
-	z-index:999;
-	color:white;
-	display:none;
-	box-sizing:border-box;
-	font-size:2vw;
-	
-}
-#reel_image{
-
-object-fit:contain;
-margin:auto;
-display:block;
-height:34vw;
-width:60vw;
-}
-#reel_back
-{
-overflow:auto;
-clear:right;
-margin:auto;
-object-fit:cover;
-cursor:no-drop;
-}
-
-.close_next{
-
-float:right;
-margin-right:2vw;
-cursor:pointer;
-user-select:none;
-}
-.prev{
-float:left;
-margin-left:2vw;
-cursor:pointer;
-user-select:none;
-
-}
-.heading_gal{
-
-margin-top:12vh;
-margin-left:auto;
-text-align:center;
-font-size:6vw;
-display:block;
-font-weight:bolder;
-}
-
-</style>
 <script language="JavaScript" src="lightbox.js">
-
 </script>
+
+<script language="JavaScript" src="nav_mobile.js">
+</script>
+
 </head>
 <body>
 <div id="navbar">
@@ -98,25 +28,47 @@ font-weight:bolder;
 <a class="top" href="gallery.html">GALLERY</a>
 <a class="top" href="blog.html">BLOG</a>
 <a class="top" href="contact.html">CONTACT</a>
+<div class="outer" onclick="animate_ham()">
+	<div class="inner"></div>
+	<div class="inner"></div>
+	<div class="inner"></div>
+</div>
 </nav>
 </div>
-<div>
+CSS RENDERING ...
+
+<div id="m_navbar">
+	<a class="m_top" href="index.html">HOME</a>
+	<a class="m_top" href="about.html">ABOUT </a>
+	<a class="m_top" href="gallery.html">GALLERY</a>
+	<a class="m_top" href="blog.html">BLOG</a>
+	<a class="m_top" href="contact.html">CONTACT</a>
+</div>
+
+
 <div id="reel_base">
 	<div class="close_next" onmousedown="hidegal()">
-	close
+	<img src="x.svg">
 	</div>
 	<div id="reel_back">
 		<img id="reel_image" src="">
 	</div>
 	<div class="prev" onmousedown="prev()">
-		PREV
+		<img src="arrow-left.svg">
 	</div>
 	<div class="close_next" onmousedown="next()">
-		NEXT
+		<img src="arrow-right.svg">
 	</div>
 	
 </div>
-<h2 class="heading_gal">LIFE</h2>
+
+
+<div class="content">
+
+	<h2>Life</h2>
+</div>
+
+
 <div class="parent">
 	<div class="child"><img onclick="showgal(1);" src="life\l1.jpg" ></div>
 	<div class="child" ><img onclick="showgal(2);" src="life\l2.jpg"></div>
@@ -140,17 +92,17 @@ font-weight:bolder;
 <footer id="foot">
 	<div class="socicon">
 		<a  href="https://www.instagram.com/hardiks_51/">
-		<img src="logos\instagram.jpg" height="3%" width="3%">
+		<img src="logos\instagram.jpg">
 		</a>
 	</div>
 	<div class="socicon">
 		<a href="https://www.linkedin.com/in/hardik-sharma-a0682b196">
-			<img src="logos\linkedin.png" height="3%" width="3%">
+			<img src="logos\linkedin.png" >
 		</a>
 	</div>
 	<div class="socicon">
 		<a href="mailto:hardik00051@gmail.com">
-			<img src="logos\mail.png" height="3%" width="3%">
+			<img src="logos\mail.png" >
 		</a>	
 	</div>
 	

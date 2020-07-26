@@ -1,64 +1,114 @@
 <!DOCTYPE HTML>
-<html>
+<html >
 <head>
+  
+<link rel="icon" href="logos\favicon.png" type="image/x-icon">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hardik Sharma Photography</title>
-<link rel="stylesheet" type="text/css" href="navbar.css">
-<link rel="stylesheet" type="text/css" href="footer.css">
+<link rel="stylesheet" type="text/css" media="(min-width:600px)" href="navbar.css">
+<link rel="stylesheet" type="text/css" media="(max-width:600px)" href="m_navbar.css">
+<link rel="stylesheet" type="text/css" media="(min-width:600px)" href="footer.css">
+<link rel="stylesheet" type="text/css" media="(max-width:600px)" href="m_footer.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Raleway:wght@400;600;900&display=swap" rel="stylesheet">
-<script>
-function go()
-{
-setTimeout(function()
-{
-document.getElementById("cover").style.display="none";
-//document.getElementById("above").style.display="none";
-},6000);
-}
-</script>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&family=Montserrat:wght@800;900&family=Open+Sans&family=Raleway:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+
 <style>
+*
+	{
+		box-sizing:border-box;
+	}
+html
+{
+	scroll-behavior: smooth
+}
+#cover
+{
+position:fixed;
+background-color:white;
+height:100%;
+width:100%;
+z-index:999;
+margin:0;
 
-.backim .overtext{
+}
+.backim{
+position:relative;
+margin-top:6vh;
+display:inline-block;
+background-color: #00000078;
+}
+
+
+.backim > .overtext{
 position:absolute;
 z-index:1;
-margin:0 auto;
+margin:15vh auto;
 left:0;
 right:0;
-top:35%;
+top:15vh;
 letter-spacing:0.5vw;
-font-size:4vw;
-font-family:baskerville old face;
+font-size:7vw;
+font-family:Montserrat,Open Sans,Raleway,Serif;
+font-weight:bold;
 text-align:center;
 color:white;
 animation-name: x;
-animation-duration:3s;
+animation-duration:4s;
+animation-delay:3s;
 animation-fill-mode:forwards;
 }
-
-#hr1{
-width:50%;
-shade:black;
-}
-
-.backim{
-position:relative;
-margin-top:5vw;
-display:inline-block;
+.small_overtext
+{
+	font-size:2vw;
+	font-family:open sans;
+	text-align:center;
+	margin:3vh auto;
+	width:70vw;
 
 }
 
-.slides{
-height:100%;
-width:100%;
+
+
+.slide_holder{
+		position:relative;
+		width:98.5vw;
+		height:100vh;
+		margin:0 auto;
+	
+	}
+.slide_image
+	{
+		
+		position:absolute;
+		margin:2vh auto;
+		width:inherit;
+		height:inherit;
+		
+	}
+.slide_image>img
+	{
+		//position:absolute;
+		display:block;
+		width:inherit;
+		height:inherit;
+		object-fit:cover;
+		object-position:50% 40%;
+
+	}	
+.down_anchor
+{
+	display:none;
+	
 
 }
 #content{
-margin-top:2%;
-text-align:center;
+margin:2%;
+text-align:justify;
 font-size:1.8vw;
-font-family:raleway;
-margin-bottom:2%;
+font-family:raleway,sans-serif;
+padding:2vw;
 }
 #quote{
 font-style:italic;
@@ -99,7 +149,7 @@ background-color:#3c3a3ae0;
 height:21vw;
 width:21vw;
 border-radius:37.5vw;
-margin: 3.6vw 3.6vw;
+margin: 3.6vw;
 animation-name:zoom;
 animation-duration:2s;
 animation-iteration-count:infinite;
@@ -113,7 +163,7 @@ background-color:#4a4747e0;
 height:14vw;
 width:14vw;
 border-radius:14vw;
-margin: 3.6vw 3.6vw;
+margin: 3.6vw;
 animation-name:zoom;
 animation-duration:2s;
 animation-iteration-count:infinite;
@@ -126,7 +176,7 @@ background-color:#504d4de0;
 height:7vw;
 width:7vw;
 border-radius:7vw;
-margin: 3.6vw 3.6vw;
+margin: 3.6vw;
 animation-name:zoom;
 animation-duration:2s;
 animation-iteration-count:infinite;
@@ -162,10 +212,139 @@ animation-fill-mode:both;
 
 
 
+@media only screen and (max-width:600px)
+{
+.backim
+{
+	margin-top:3vh;
+
+}
+.backim > .overtext
+{
+font-size:6.5vh;
+letter-spacing:0.5vh;
+top:35%;
+margin: 5vh auto;
+}
+
+.small_overtext
+{
+	font-size:3vh;
+	font-family:Open sans;
+	text-align:center;
+	margin:3vh auto ;
+	width:70vw;
+
+}
+
+.slide_holder{
+		
+		width:100vw;
+		height:100vh;
+		margin:0 auto;
+	
+	}
+.down_anchor
+{
+	display:block;
+	margin:19vh auto 3vh;
+	
+}
+.down_anchor img
+
+{
+	height:8vh;
+	width:60vw;
+}
+
+
+#cover
+{
+width:100vw;
+}
+#a
+{
+	width: 28vh;
+    height: 28vh;
+    border-radius: 28vh;
+    margin-top: 25vh;
+}
+#b{
+	height: 21vh;
+    width: 21vh;
+    border-radius: 37.5vh;
+    margin: 3.6vh;
+}
+#c
+{
+	height: 14vh;
+    width: 14vh;
+    border-radius: 14vh;
+    margin: 3.6vh;
+
+}
+#d
+{
+	height: 7vh;
+    width: 7vh;
+    border-radius: 7vh;
+    margin: 3.6vh
+
+
+}
+#above{
+	letter-spacing: 2vw;
+    font-size: 4vh;
+	margin-top:5%;
+
+
+}
+#quote
+{
+font-size:4vh;
+
+
+}
+#content{
+font-size:3vh;
+padding:1 vh 2vw;
+}
+
+}
+#m_navbar{
+display:none;
+}
+@keyframes faded
+	{
+		from{opacity:1}
+		to{opacity:0}	
+	}
+@keyframes faded_rev
+	{
+		from{opacity:0}
+		to{opacity:1}	
+	}
+
 </style>
+<script src="nav_mobile.js">
+</script>
+<script src="slideshow.js">
+</script>
+<script>
+function go()
+{
+setTimeout(function()
+{
+document.getElementById("cover").style.display="none";
+
+},4000);
+}
+
+</script>
 
 </head>
-<body onload=go();>
+<body onload="go();" >
+
 
 <div id="navbar">
 <div class="mylogo"><a href="index.html"><img class="mylogo" src="logos\mylogo.jpeg"></a></div>
@@ -175,9 +354,15 @@ animation-fill-mode:both;
 <a class="top" href="gallery.html">GALLERY</a>
 <a class="top" href="blog.html">BLOG</a>
 <a class="top" href="contact.html">CONTACT</a>
-</nav>
+<div class="outer" onclick="animate_ham()">
+	<div class="inner"></div>
+	<div class="inner"></div>
+	<div class="inner"></div>
 </div>
-<div id="cover" style="position:fixed;background-color:white;height:100%;width:100%;z-index:9999;">
+</nav>
+</div> 
+
+<div id="cover" >
 	<div id="a">
 		<div id="b">
 			<div id="c">
@@ -189,45 +374,62 @@ animation-fill-mode:both;
 	HARDIK SHARMA
 	</div>
 </div>
+<div id="m_navbar">
+	<a class="m_top" href="index.html">HOME</a>
+	<a class="m_top" href="about.html">ABOUT </a>
+	<a class="m_top" href="gallery.html">GALLERY</a>
+	<a class="m_top" href="blog.html">BLOG</a>
+	<a class="m_top" href="contact.html">CONTACT</a>
+</div>
 <!--Space for slideshow-->
 <div class="backim">
-	<img class="slides" src="b1 (2).jpg">
+	<div class="slide_holder">	
+		<div class="slide_image"><img src="blog_card3.jpeg"></div>
+		<div class="slide_image"><img src="cover2_op.jpg"></div>
+		<div class="slide_image"><img src="cover1_op.jpg"></div>
+	</div>
 	<div class="overtext">
-	PHOTOGRAPHY.REDEFINED.
-	<hr id="hr1">
+	PERSPECTIVE<br>
+		<div class="small_overtext">
+			MEETS THE LENS
+		</div>
+	<div class="down_anchor"><a href="#content" ><img src="downarr.svg"></a></div>
 	</div>
 </div>
-	<div id="content">
+<div id="content"  >
 	<div id="quote">"Taking an image, freezing a moment, reveals how rich reality truly is..."</div>
+	<br>
 	Reality,life,truth-all have wildly varied definitions. But one thing unites them all-
 	perspective. A perspective of who we are, what we see and what we feel.Hey there!My name's Hardik and I try to capture the world around me with my own perspective<br>
 	
 	
 	<br>Explore through my website and the images that portray the various dimensions of the world around us.Feel yourself immersed into the world of amatuer photography!
-	</div>
-
-
+	
 </div>
+
+
+
 
 <footer id="foot">
 	<div class="socicon">
-		<a  href="https://www.instagram.com/hardiks_51/">
-		<img src="logos\instagram.jpg" height="3%" width="3%">
+		<a  href="https://www.instagram.com/hardiks_51/" >
+		<img src="logos\instagram.jpg" >
 		</a>
 	</div>
 	<div class="socicon">
 		<a href="https://www.linkedin.com/in/hardik-sharma-a0682b196">
-			<img src="logos\linkedin.png" height="3%" width="3%">
+			<img src="logos\linkedin.png" >
 		</a>
 	</div>
 	<div class="socicon">
 		<a href="mailto:hardik00051@gmail.com">
-			<img src="logos\mail.png" height="3%" width="3%">
+			<img src="logos\mail.png" >
 		</a>	
 	</div>
-	
+	<br>
 	<div id="footext">©Copyright 2020,Hardik Sharma. All rights reserved.</div>
 
 </footer>
+
 </body>
 </html>

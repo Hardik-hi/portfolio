@@ -2,14 +2,28 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="navbar.css">
-<link rel="stylesheet" type="text/css" href="footer.css">
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Raleway:wght@400;600;900&display=swap" rel="stylesheet">
+
+<meta content="width=device-width, initial-scale=1" name="viewport" >
+
+<link rel="icon" href="logos\favicon.png" type="image/x-icon">
+<title>Contact-Hardik Sharma</title>
+<link rel="stylesheet" type="text/css" media="(min-width:600px)" href="navbar.css">
+<link rel="stylesheet" type="text/css" media="(max-width:600px)" href="m_navbar.css">
+
+<link rel="stylesheet" type="text/css" media="(min-width:600px)" href="footer.css">
+<link rel="stylesheet" type="text/css" media="(max-width:600px)" href="m_footer.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&family=Montserrat:wght@800;900&family=Open+Sans&family=Raleway:wght@200;300;400;500;700&display=swap" rel="stylesheet">
 
 <style>
+
 body,input,textarea{
 font-size:2vw;
 font-family:Raleway,Sans Serif;
+}
+*
+{
+box-sizing:border-box;
 }
 
 .content{
@@ -27,19 +41,16 @@ text-decoration:underline;
 }
 .main_form{
 position:relative;
-margin-top:-5vh;
-margin-left:auto;
-margin-right:auto;
-margin-bottom:10vh;
+margin:-5vh auto 10vh;
 width:60vw;
-height:40%;
+height:70vh;
 box-sizing:border-box;
 
 box-shadow: 0 4px 8px black, 0 6px 20px 0 black;
 animation-name:shadowchange;
-animation-duration:10s;
+animation-duration:3s;
 animation-direction:alternate;
-animation-fill-mode:backwards;
+//animation-fill-mode:backwards;
 animation-iteration-count:infinite;
 }
 .field_box{
@@ -74,6 +85,12 @@ transition-property:border-radius,border-width;
 transition-duration:1s;
 transition-timing-function:ease;
 }
+.err{
+float:right;
+font-size:1.5vw;
+color:red;
+
+}
 .field textarea
 {
 padding:1vh 1vw;
@@ -106,90 +123,117 @@ color:white;
 background:#171616bf;
 outline:none;
 }
+.success_message
+{
+	
+	position:absolute;
+	display:none;
+	height:inherit;
+	width:inherit;
+	text-align:center;
+	background-color:white;
+	margin:0 ;
+	padding:2vh 10vw;
+	font-size:4vw;
+	z-index:10;
+	animation-name:success_all;
+	animation-duration:2s;
+	animation-fill-mode:forwards;
+	opacity:0;
+
+}
+.success_message img 
+{
+display:block;
+height:16vw;
+
+margin: 3vh auto 0;
+transform:rotateY(540deg);
+animation-name:success_image;
+animation-duration:1s;
+animation-fill-mode:forwards;
+
+}
+@media only screen and (max-width:600px)
+{
+body,input{
+font-size:2.5vh;
+}
+.content{
+	margin:10vh auto;
+	width:80vw;
+}
+.content > h2
+{
+	font-size:5vh;
+}
+.main_form
+{
+width:80vw;
+height:60vh;
+
+
+}
+.field_name{
+	
+	padding:2vh 1vw;
+	width:10vw;
+
+}
+.field input {
+	
+	font-size:2vh;
+	height:5vh;
+	width:40vw;
+	border-width:1px;
+}
+.err
+{
+	font-size:1.5vh;
+	display:block;
+
+}
+.field textarea
+{
+	margin-left:5vw;
+	height:15vh;
+	width:40vw;
+	font-size:3vw;
+
+}
+#submit input{
+	width:25vw;
+}
+
+.success_message
+{
+	padding:10vh 10vw;
+	font-size:4vh;
+
+}
+.success_message img 
+{
+	height:16vh;
+}
+
+}
 /*animations*/
 @keyframes shadowchange{
-0% {box-shadow: 0 4px 8px black, 0 6px 20px 0 black;}
-15% {box-shadow:0 4px 8px violet, 0 6px 20px 0 violet;}
-30% {box-shadow:0 4px 8px blue, 0 6px 20px 0 blue;}
-45% {box-shadow:0 4px 8px green,0 6px 20px 0 green;}
-60% {box-shadow:0 4px 8px yellow, 0 6px 20px 0 yellow;}
-75% {box-shadow:0 4px 8px orange, 0 6px 20px 0 orange;}
-100% {box-shadow:0 4px 8px red, 0 6px 20px 0 red;}
+0% {box-shadow: 0 4px 8px white, 0 6px 20px 0 #66676df0;}
+100% {box-shadow:0 4px 8px black, 0 6px 20px 0 #01041bdb;}
 }
+@keyframes success_image{
+from{transform:rotateY(540deg);}
+to{transform:rotate(0deg);}
 
+}
+@keyframes success_all{
+from{opacity:0}
+to{opacity:1}
+
+}
 </style>
-<script language="JavaScript">
-
-setInterval(function(){shadow=document.getElementsByClassName("main_form")[0].style.boxShadow="0 4px 8px red, 0 6px 20px 0 red";},3000);
-function validate(key){
-
-var base=document.getElementsByClassName("field");
-if(key==1){
-var name=base[0].getElementsByTagName("input")[0].value;
-var flag=0,i,error1=0;
-if(name.length==0)
-	{errmsg1="required field";
-		error1=1;
-	}
-else{
-for(i=0;i<name.length;i++)
-{
-if(name[i]<'A' || name[i]>'z')
-{
-	
-	if(name[i]!=" ")
-	{flag=1;
-	break;}
-	
-}
-
-}
-if(flag==1)
-	{errmsg1="Invalid name";
-	error1=1;
-	}
-}
-if(error1!=0)
-{
-document.getElementById("err1").innerHTML=errmsg1;
-base[0].getElementsByTagName("input")[0].style.borderColor="red";
-}
-else
-{
-	document.getElementById("err1").innerHTML="";
-	 base[0].getElementsByTagName("input")[0].style.borderColor="green";
-}
-}
-else if(key==2)
-{
-//for email
-var mail=base[1].getElementsByTagName("input")[0].value;
-var error2=0;
-if(mail.length==0)
-	{	
-	var errmsg2="required field";
-	error2=1;
-	}
-else{
-var flag=mail.indexOf('@')+mail.indexOf('.');
-if(flag<=1)
-{errmsg2="Invalid E-mail";
-	error2=1;
-}
-}
-if(error2!=0)
-{
-document.getElementById("err2").innerHTML=errmsg2;
-base[1].getElementsByTagName("input")[0].style.borderColor="red";
-}
-else if(error2==0)
-	{document.getElementById("err2").innerHTML="" ;
-	 base[1].getElementsByTagName("input")[0].style.borderColor="green";
-	 }
-}
-}
-
-
+<script src="nav_mobile.js">
 </script>
 </head>
 <body>
@@ -201,20 +245,40 @@ else if(error2==0)
 <a class="top" href="gallery.html">GALLERY</a>
 <a class="top" href="blog.html">BLOG</a>
 <a class="top" href="contact.html">CONTACT</a>
+<div class="outer" onclick="animate_ham()">
+	<div class="inner"></div>
+	<div class="inner"></div>
+	<div class="inner"></div>
+</div>
 </nav>
 </div>
+CSS RENDERING ...
+
+<div id="m_navbar">
+	<a class="m_top" href="index.html">HOME</a>
+	<a class="m_top" href="about.html">ABOUT </a>
+	<a class="m_top" href="gallery.html">GALLERY</a>
+	<a class="m_top" href="blog.html">BLOG</a>
+	<a class="m_top" href="contact.html">CONTACT</a>
 </div>
+
 <div class="content">
 <h2>CONTACT	</h2>
-Hey there! Want to give feedback? Have any questions? Or want to collaborate? Fill this form and you're all set! I'll get back to you real quick...
+<div id="content_inner">Hey there! Want to give feedback? Have any questions? Or want to collaborate? Fill this form and you're all set! I'll get back to you real quick...</div>
 </div>
+
 <div class="main_form">
-<form name="f1" method="post" action="">
+	<div class="success_message">
+		<img src="check.png" ><br>
+		THANK YOU!
+	</div>
+<form name="f1" method="post" >
+	
 	<div class="field_box">
 		<div class="field_name">Name: </div>
 		<div class="field">
 		<input type="text" name="name1" onblur="validate(1);">
-		<span id="err1" style="float:right;font-size:1.5vw;color:red"></span>
+		<span class="err"></span>
 		</div>
 	</div>
 	<div class="field_box">
@@ -223,65 +287,50 @@ Hey there! Want to give feedback? Have any questions? Or want to collaborate? Fi
 		</div>
 		<div class="field">
 		<input type="text" name="mail" onblur="validate(2);">
-		<span id="err2" style="float:right;font-size:1.5vw;color:red;"></span>
+		<span class="err"></span>
 		</div>
 	</div>
 	<div class="field_box">
-		<div class="field_name" style="position:absolute;margin-right:3vw;">
+		<div class="field_name" >
 		Query:
 		</div>
+		<br>
 		<div class="field" style="margin-left:19vw;">
 		<textarea></textarea>
 		</div>
 	</div>
-	<div id="submit" style="margin:2vh auto;width:20vw">
-	<input type="button" value="SUBMIT" onclick="validate(1);validate(2);">
+	<div id="submit" style="text-align:center;">
+	<input type="button" value="SUBMIT" onclick="submit_data()">
 	</div>
 	
 </div>
+
 </form>
 </div>
+
 <footer id="foot">
 	<div class="socicon">
 		<a  href="https://www.instagram.com/hardiks_51/">
-		<img src="logos\instagram.jpg" height="3%" width="3%">
+		<img src="logos\instagram.jpg" >
 		</a>
 	</div>
 	<div class="socicon">
 		<a href="https://www.linkedin.com/in/hardik-sharma-a0682b196">
-			<img src="logos\linkedin.png" height="3%" width="3%">
+			<img src="logos\linkedin.png" >
 		</a>
 	</div>
 	<div class="socicon">
 		<a href="mailto:hardik00051@gmail.com">
-			<img src="logos\mail.png" height="3%" width="3%">
+			<img src="logos\mail.png"  >
 		</a>	
 	</div>
 	
 	<div id="footext" style="font-size:1.5vw;";>©Copyright 2020,Hardik Sharma. All rights reserved.</div>
 
 </footer>
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyBiOF37Vn53bDRHPj5S-ADPzsrZvDrpd2Q",
-    authDomain: "collab-data-portfolio.firebaseapp.com",
-    databaseURL: "https://collab-data-portfolio.firebaseio.com",
-    projectId: "collab-data-portfolio",
-    storageBucket: "collab-data-portfolio.appspot.com",
-    messagingSenderId: "11081966459",
-    appId: "1:11081966459:web:9b19f87461aff35fba13de"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  var database = firebase.database();
-</script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-database.js"></script> 
+	<script src="send_data.js"></script>
 </body>
 </html>
 	

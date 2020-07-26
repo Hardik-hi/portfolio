@@ -1,10 +1,17 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="navbar.css">
-<link rel="stylesheet" type="text/css" href="footer.css">
+<title>About-Hardik Sharma</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="logos\favicon.png" type="image/x-icon">
+<link rel="stylesheet" type="text/css" media="(min-width:600px)" href="navbar.css">
+<link rel="stylesheet" type="text/css" media="(max-width:600px)" href="m_navbar.css">
+<link rel="stylesheet" type="text/css" media="(min-width:600px)" href="footer.css">
+<link rel="stylesheet" type="text/css" media="(max-width:600px)" href="m_footer.css">
+
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Raleway:wght@400;600;900&display=swap" rel="stylesheet">
 <style>
+
 #me1{
 height:23vw;
 width:23vw;
@@ -36,31 +43,37 @@ box-sizing:border-box;
 .image_center img{
 
 border-radius:100%;
-width:23vw;
-height:23vw;
+width:inherit;
+height:inherit;
 object-fit:cover;
 object-position:42%;
 }
 
-#about{
-position:relative;
-font-family:Lato,sans-serif;
-margin-top: 13vh;
-margin-left: auto;
-margin-bottom:0;
+.about{
+box-sizing:border-box;
+
+margin:12vh auto 6vh;
+width:70%;
+text-align:justify;
+}
+
+.about > h2
+{
+font-weight:bolder;
 font-size:5vw;
 text-align:center;
+font-family:'Lato', sans-serif;
 text-decoration:underline;
+
 }
 .content{
 position:relative;
 border:2px black solid;
 font-family:Raleway;
 text-align:justify;
-padding-left:10vw;
-padding-right:10vw;
+padding:0 10vw;
 font-size:1.5vw;
-width:60%;
+width:60vw;
 margin:auto;
 
 }
@@ -71,8 +84,51 @@ margin-bottom:10vh;
 width:100%;
 box-sizing:border-box;
 }
+
+@media only screen and (max-width:600px)
+{
+	.about{
+	margin:12vh auto 8vh;
+	width:80vw;
+	}
+	.about  h2
+	{
+		font-size:5vh;
+	}
+	#me1
+	{
+		margin:4vw 3vw;
+		height:23vh;
+		width:23vh;
+	}
+	#me2
+	{
+		
+		height:23vh;
+		width:23vh;
+	}
+	.image_center
+	{
+		height:30vh;
+		width:70vw;
+		
+	}
+	.content
+	{
+		width:80vw;
+		font-size:2vh;
+		padding:1vh 3vw;
+		border:1px solid black;
+	}
+
+
+}
 </style>
+
+<script src="nav_mobile.js">
+</script>
 </head>
+
 <body>
 <div id="navbar">
 <div class="mylogo"><a href="index.html"><img class="mylogo" src="logos\mylogo.jpeg"></a></div>
@@ -82,10 +138,27 @@ box-sizing:border-box;
 <a class="top" href="gallery.html">GALLERY</a>
 <a class="top" href="blog.html">BLOG</a>
 <a class="top" href="contact.html">CONTACT</a>
+<div class="outer" onclick="animate_ham()">
+	<div class="inner"></div>
+	<div class="inner"></div>
+	<div class="inner"></div>
+</div>
 </nav>
 </div>
+CSS RENDERING ... 
+<div id="m_navbar">
+	<a class="m_top" href="index.html">HOME</a>
+	<a class="m_top" href="about.html">ABOUT </a>
+	<a class="m_top" href="gallery.html">GALLERY</a>
+	<a class="m_top" href="blog.html">BLOG</a>
+	<a class="m_top" href="contact.html">CONTACT</a>
 </div>
-<h2 id="about">ABOUT</h2>
+
+<div class="about">
+
+	<h2>ABOUT</h2>
+</div>
+
 <div id="main">
 	
 	<div class="image_center">
@@ -98,24 +171,24 @@ box-sizing:border-box;
 	</div>
 	<div class="content">
 	
-<p>My name's Hardik Sharma. Photography is my art, pixels are my canvas and my phone's camera is my brush. And I try to paint the most vivid of expressions, emotions and glimpses of everything around me. I like to click, write, code, work on UX/UI of webpages and (sometimes) read. I am currently 19 and pursuing Bachelors in Technology at National Institute of Technology, Kurukshetra(you can find me there clicking a picture or two ;-p).</p><p> Feel free to contact me using the Contact page or through the handles given below!</p>
+<p>My name's Hardik Sharma. Photography is my art, pixels are my canvas and my phone's camera is my brush. And I try to paint the most vivid of expressions, emotions and glimpses of everything around me. I like to click, write, code, learn UX/UI and (sometimes) read. I am currently 19 and pursuing Bachelors in Technology at National Institute of Technology, Kurukshetra(you can find me there clicking a picture or two ;-p).</p><p> Feel free to contact me using the Contact page or through the handles given below!</p>
 
 	</div>	
 </div>
 <footer id="foot">
 	<div class="socicon">
 		<a  href="https://www.instagram.com/hardiks_51/">
-		<img src="logos\instagram.jpg" height="3%" width="3%">
+		<img src="logos\instagram.jpg" >
 		</a>
 	</div>
 	<div class="socicon">
 		<a href="https://www.linkedin.com/in/hardik-sharma-a0682b196">
-			<img src="logos\linkedin.png" height="3%" width="3%">
+			<img src="logos\linkedin.png" >
 		</a>
 	</div>
 	<div class="socicon">
 		<a href="mailto:hardik00051@gmail.com">
-			<img src="logos\mail.png" height="3%" width="3%">
+			<img src="logos\mail.png" >
 		</a>	
 	</div>
 	

@@ -1,0 +1,109 @@
+*
+{
+	box-sizing:border-box;	
+}
+
+body{
+font-family:Raleway;
+
+
+}
+.blog_heading{
+font-size:3vw;
+text-align:center;
+color:white;
+background-color:#040346;
+padding:0.1vh;
+margin-top:15vh;
+}
+
+.main_image{
+display:block;
+margin: 3vh auto;
+height:27vw;
+width:100vw;
+object-fit:cover;
+}
+.quote{
+font-style:italic;
+font-size:2.5vw;
+font-family:Times New Roman;
+color:#434346;
+text-align:center;
+padding:1vw;
+width:60%;
+margin:auto;
+}
+#quote_cred
+{
+	margin-left:70%;
+	font-style:italic;
+	font-weight:bold;
+}
+.body_image
+{
+height:18vw;
+width:32vw;
+display:inline-block;
+float:right;
+margin:2vh 2vw;
+}
+p
+	{
+		font-size:1.5vw;
+		padding:1vh 1vw;
+	}
+.blog_list
+	{
+		font-size:2vw;
+		padding:0 1vw;
+		font-weight:bold;
+	}
+
+/*for mobile*/
+@media only screen and (max-width:600px)
+{
+	
+	.blog_heading
+	{
+		font-size:3vh;
+		padding:1vh 2vw;
+		margin-top:10vh;
+	}
+	.main_image
+	{
+		height:30vh;
+	}
+	.quote
+	{
+		font-size:2.5vh;
+		width:70vw;
+		padding:1vh 2vw;
+	}
+	#quote_cred
+	{
+	margin-left:70vw;
+	font-style:italic;
+	font-weight:bold;
+	font-size:2vh;
+	}
+	p
+	{
+		font-size:2vh;
+		line-spacing:1vh;
+		padding:1vh 2vw;
+	}
+	.body_image
+	{
+		height:18vh;
+		width:40vw;
+		
+	}
+	.blog_list
+	{
+		font-size:2.5vh;
+		padding:0 3vw;
+		font-weight:bold;
+	}
+	
+}
