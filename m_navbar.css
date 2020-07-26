@@ -51,9 +51,7 @@ a:active{
 color:yellow;
 }
 
-a:visited{
-color:yellow;
-}
+
 .mylogo > a:link{
 color:inherit;	
 text-decoration:none;
