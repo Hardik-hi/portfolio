@@ -1,4 +1,4 @@
-# Photography Page
+# Photography Site
 
 <p>
 <a href="https://hardik-hi.github.io/portfolio">Live site</a><br/>
